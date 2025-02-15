@@ -1,0 +1,345 @@
+/*Global*/
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.55;
+        background-color: #fff;
+        color: #fff;
+    }
+
+    .wrapper {
+        background-image: url(../images/backgroundtexture.jpeg);
+        min-height: 100vh; 
+        display: grid; 
+        grid-template-rows: auto 1fr auto;
+    }
+
+/*Header*/
+    header {
+        max-block-size: 200px;
+    }
+
+    .logo-container {
+        padding-block-start: 10px;
+        inline-size: 150px;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+    }
+
+    .logo-header {
+        block-size: 125px;
+        margin-inline: auto;
+    }
+
+/*Image Gallery Directory*/
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+     
+    .galleryimg {
+        position: relative;
+        max-width: 330px;
+        margin: 5px;
+        border: 2px #fff solid;
+        object-fit: cover;
+    }
+
+    .imgimg {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 227.5px;
+    }
+
+    .galleryoverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        color: #fff;
+        display: flex;
+        font-family: sans-serif;
+        font-size: 1.3rem;
+        align-items: center;
+        padding-inline: 5px;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .galleryoverlay:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .descwords {
+        text-align: center;
+        max-width: 75%;
+    }
+
+    .descwords p {
+        margin-block-start: 0;
+        color: #DBDBDB;
+        margin-block-end: 35px;
+    }
+
+/*Two Column Layout*/
+    .two-column-layout {
+        display: flex;
+        gap: 75px;
+
+        @media (width > 720px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .left-column {
+        max-height: 500px;
+        overflow: scroll;
+        flex: 2 0 0%;
+    }
+
+    .right-column {
+        flex: 1 0 0%;
+    }
+
+    .left-column p {
+        text-align: start;
+        padding-inline-start: 50px;
+        padding-block-end: 25px;
+    }
+
+    .left-column img:hover {
+        transition: all 0.3s ease 0s;
+        filter: brightness(70%);
+    }
+
+    .right-column img {
+        cursor: pointer;
+        max-height: 500px;
+        margin: auto;
+    }
+
+    .right-column img:hover {
+        transition: all 0.3s ease 0s;
+        filter: brightness(70%);
+    }
+
+/*Resume Reveal Checkbox*/
+    .card {
+        text-align: center;
+    }
+
+    #ch {
+        display: none;
+    }
+
+    #ch:checked ~ .content {
+        display: block;
+    }
+
+    #ch:checked ~ .more {
+        display: none;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .content img {
+        display: block;
+        margin: auto;
+        padding-block-end: 25px;
+        width: 600px;
+    }
+
+    .content img:hover {
+        cursor: pointer;
+    }
+
+    .less {
+        font-size: 1rem;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        background-color: #3D3D3D;
+        padding: 10px 15px;
+        border-radius: 3px;
+        margin-top: 12px;
+        border: 2px solid white;
+        font-weight: bold;
+        transition: all 0.3s ease 0s;
+    }
+
+    .less:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #DBDBDB;
+    }
+
+    .more {
+        font-size: 1rem;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        background-color: #3D3D3D;
+        padding: 10px 15px;
+        border: 2px solid white;
+        border-radius: 3px;
+        margin-top: 12px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .more:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #DBDBDB;
+    }
+
+/*Images*/
+    img {
+        display: block;
+        max-inline-size: 100%;
+    }
+
+/*Main*/
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*Main Gallery*/
+    .maingallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maingallery img {
+        cursor: pointer;
+    }
+
+    .maingallery img:hover {
+        transition: all 0.3s ease 0s;
+        filter: brightness(70%);
+    }
+
+/*Footer*/
+    footer {
+        padding-block: 5px;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        color: #fff;
+        font-size: 0.85rem;
+        align-items: flex-end;
+    }
+
+    .social {
+        padding-block-end: 15px;
+        padding-inline-start: 15px;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    footer .number {
+        padding-inline-end: 15px;
+    }
+    .social img {
+        max-height: 20px;
+        padding-inline: 7px;
+    }
+
+/*List Link*/
+    ul {
+        text-align: center;
+        padding-inline-start: 0;
+        color: #fff;
+    }
+
+    .main-link {
+        font-weight: normal;
+        list-style-type: none;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+/*Headings*/
+    h1 {
+        text-align: center;
+        color: #DBDBDB;
+        margin-block-start: 0;
+        margin-block-end: 10px;
+    }
+
+/*Links*/
+    a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #fff;
+    }
+
+    a:hover,
+    a:focus-visible {
+        color: grey;
+    }
+
+    a:active {
+        color: #fff ;
+    }
+
+/*Full Image View*/
+    #FullImageView {
+        overflow-y: hidden;
+        display: none;
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .9);
+        text-align: center;
+    }
+
+    #FullImage {
+        margin: auto;
+        padding: 24px;
+        max-width: 98%;
+        max-height: 98%;
+    }
+
+    #CloseButton {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        padding-inline-end: 15px;
+    }
+
+    #CloseButton:hover {
+        transition: all 0.3s ease 0s;
+        filter: brightness(70%);
+    }

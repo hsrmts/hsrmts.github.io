@@ -1,0 +1,73 @@
+<!DOCTYPE html lang="en-US">
+<html>
+    <head>
+	    <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="x-icon" href="images/whitelogo.png">
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Portfolio WebDev Page</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                    <div class="logo-container">
+                        <a href="index.html"><img src="images/whitelogo.png" class="logo-header" alt="Harry Seremetis' Logo"></a>
+                    </div>
+            </header>
+    
+            <main class="maingallery">
+                <div>
+                    <h1>WebDev Projects</h1>
+                </div>
+
+                <div class="gallery">
+                    <div class="galleryimg">
+                        <iframe height="227.5px" src="https://www.youtube.com/embed/n9HR7FRngck" title="webdev1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="galleryimg">
+                        <iframe height="227.5px" src="https://www.youtube.com/embed/2L1UaMkN_9M" title="webdev2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <div>
+                    <ul>
+                        <li class="main-link"><a href="hhttps://github.com/hsrmts/Restaurant-Project">GitHub Link: Restaurant Project</a></li>
+
+                        <li class="main-link"><a href="https://github.com/hsrmts/NonProfit-Project">GitHub Link: Nonprofit Project</a></li>
+
+                        <li>This website is also a personal passion project of mine!</li>
+                    </ul>
+                </div>
+            </main>
+    
+            <footer>
+                <div class="social">
+                    <a href="https://www.instagram.com/h_srmts/"><img src="images/whiteinstalogo.png"></a>
+                    <a href="https://www.linkedin.com/in/harry-seremetis/"><img src="images/whitelinkedinlogo.png"></a>
+                    <a href="https://github.com/hsrmts"><img src="images/whitegithublogo.png"></a>
+                </div>
+
+                <div class="number">
+                    <p><a href="mailto:harryseremetis@gmail.com">harryseremetis@gmail.com</a> | +1 516 456 8437</p>
+                </div>
+            </footer>
+        </div>
+
+        <div id="FullImageView">
+            <img id="FullImage">
+            <span id="CloseButton" onclick="CloseFullView()">&times;</span>
+        </div>
+        <script type="text/javascript">
+            function FullView(ImgLink) {
+                document.getElementById("FullImage").src = ImgLink;
+                document.getElementById("FullImageView").style.display = "block";
+            }
+            function CloseFullView() {
+                document.getElementById("FullImageView").style.display = "none";
+            }
+        </script>
+    </body>
+</html>

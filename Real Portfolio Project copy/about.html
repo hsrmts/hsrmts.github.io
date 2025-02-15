@@ -1,0 +1,69 @@
+<!DOCTYPE html lang="en-US">
+<html>
+    <head>
+	    <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="x-icon" href="images/whitelogo.png">
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Portfolio About Page</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                    <div class="logo-container">
+                        <a href="index.html"><img src="images/whitelogo.png" class="logo-header" alt="Harry Seremetis' Logo"></a>
+                    </div>
+            </header>
+    
+            <main>
+                <div class="two-column-layout" class="scroll">
+                    <div class="left-column">
+                        <p>Born and raised in Long Beach, New York. I attended Kent State University, and graduated with honors, gaining a BA in Fashion Design and a dual minor in UXD and Entrepreneurship. While there I submit a garment in the student run fashion show. I became passionate about front end WebDev towards the end of my college career, and this website is a passion project of mine to learn more about the art.</p>
+
+                        <div class="card">
+                            <input id="ch" type="checkbox">
+
+                            <div class="content">
+                                <img src="images/ResumeUpdated2.docx.jpg" alt="Resume" onclick="FullView(this.src)" >
+                                <label class="less" for="ch">Show Less <span class="arrow">&utrif;</span></label>
+                            </div>
+            
+                            <label class="more" for="ch">Resume <span class="arrow">&dtrif;</span></label>
+                        </div>
+                    </div>
+
+                    <div class="right-column">
+                        <img src="images/selfphoto.JPG" alt="personal picture" onclick="FullView(this.src)" >
+                    </div>
+                </div>
+            </main>
+    
+            <footer>
+                <div class="social">
+                    <a href="https://www.instagram.com/h_srmts/"><img src="images/whiteinstalogo.png"></a>
+                    <a href="https://www.linkedin.com/in/harry-seremetis/"><img src="images/whitelinkedinlogo.png"></a>
+                    <a href="https://github.com/hsrmts"><img src="images/whitegithublogo.png"></a>
+                </div>
+
+                <div class="number">
+                    <p><a href="mailto:harryseremetis@gmail.com">harryseremetis@gmail.com</a> | +1 516 456 8437</p>
+                </div>
+            </footer>
+        </div>
+
+        <div id="FullImageView">
+            <img id="FullImage">
+            <span id="CloseButton" onclick="CloseFullView()">&times;</span>
+        </div>
+        <script type="text/javascript">
+            function FullView(ImgLink) {
+                document.getElementById("FullImage").src = ImgLink;
+                document.getElementById("FullImageView").style.display = "block";
+            }
+            function CloseFullView() {
+                document.getElementById("FullImageView").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
